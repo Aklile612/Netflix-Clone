@@ -12,8 +12,8 @@ function Header() {
       <div className='header_container'>
         <div className='header_left'>
           <ul>
-            <li> <img src={NetfixLogo} alt="Netfix-logo" width="100" /></li>
-            <li>Netfix</li>
+            <li> <img src={NetfixLogo} alt="Netflix-logo" width="100" /></li>
+            <li>Netflix</li>
             <li>Home</li>
             <li>TVShows</li>
             <li>Movies</li>
