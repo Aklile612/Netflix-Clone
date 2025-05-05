@@ -35,7 +35,7 @@ const Row = ({title,fetchUrl,isLargeRow}) => {
                     console.log(urlParams.get('v'))
                     settrailerUrl(urlParams.get('v'));
                     
-                })
+                }).catch((error)=>console.log("Trailer not found",error))
         }
     }
     const opts={
@@ -52,7 +52,7 @@ const Row = ({title,fetchUrl,isLargeRow}) => {
             {movies.map((movie,index)=>(
                 <img
                     onClick={()=> handleclick(movie)}
-                    key={index} src={`${base_url}${isLargeRow? movie.poster_path :movie.backdrop_path}`} alt={movie.name} className={'row__poster ${isLargeRow && "row__posterLarge"}'} 
+                    key={movie.id} src={`${base_url}${isLargeRow? movie.poster_path :movie.backdrop_path}`} alt={movie.name} className={`row__poster ${isLargeRow ? "row__posterLarge" : ""}`} 
                     />
             ))}
         </div>
