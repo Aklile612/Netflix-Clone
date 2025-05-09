@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import requests from '../../utils/requests';
 import axios from '../../utils/axios'
 import "./Banner.css";
 
 const Banner =()=> {
-  const [movie,setMovie]=useState({});
+  const [movie,setMovie]=useState(null);
   useEffect(()=>{
     (async()=>{
         try{
@@ -26,7 +26,7 @@ const Banner =()=> {
         className='banner'
         style={{
             backgroundSize:"cover",
-            backgroundImage:`url('https://image.tmdb.org/t/p/original${movie?.backdrop_path}')`,
+            backgroundImage: movie?.backdrop_path ? `url('https://image.tmdb.org/t/p/original${movie.backdrop_path}')` : 'none',
             backgroundPosition:"center",
             backgroundRepeat:"no-repeat"
         }}
@@ -39,7 +39,7 @@ const Banner =()=> {
                     <button className='banner_button play'>Play</button>
                     <button className='banner_button'>My List</button>
                 </div>
-                <h1 className='banner_description'>{truncate(movie?.overview,150)}</h1>
+                <p className='banner_description'>{truncate(movie?.overview,150)}</p>
             </div>
             <div className='banner_fadeBottom'/>
       
