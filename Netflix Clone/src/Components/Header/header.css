@@ -30,7 +30,7 @@
     /* background-color: lightblue; */
 }
 .header-right ul{
-    width: 1%;
+    width: 100%;
     display: flex;
     gap: 1%;
     justify-content: space-around;
