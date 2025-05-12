@@ -36,8 +36,8 @@ const Banner =()=> {
                     {movie?.title || movie?.name || movie?.original_name}
                 </h1>
                 <div className='banner_button'>
-                    <button className='banner_button play'>Play</button>
-                    <button className='banner_button'>My List</button>
+                    <button className='banner_button play' aria-label="Play movie">Play</button>
+                    <button className='banner_button' aria-label="Add to my list">My List</button>
                 </div>
                 <p className='banner_description'>{truncate(movie?.overview,150)}</p>
             </div>

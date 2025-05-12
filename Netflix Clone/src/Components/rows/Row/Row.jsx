@@ -50,10 +50,13 @@ const Row = ({title,fetchUrl,isLargeRow}) => {
         <h1>{title}</h1>
         <div className='row_posters'>
             {movies.map((movie,index)=>(
-                <img
-                    onClick={()=> handleclick(movie)}
-                    key={movie.id} src={`${base_url}${isLargeRow? movie.poster_path :movie.backdrop_path}`} alt={movie.name} className={`row__poster ${isLargeRow ? "row__posterLarge" : ""}`} loading="lazy" onError={(e) => { e.target.src = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='225' fill='%23333'><rect width='150' height='225'/><text x='50%' y='50%' fill='%23666' text-anchor='middle' dy='.3em' font-size='14'>No Image</text></svg>" }} 
+                <div className="poster-container">
+                    <img
+                        onClick={()=> handleclick(movie)}
+                        key={movie.id} src={`${base_url}${isLargeRow? movie.poster_path :movie.backdrop_path}`} alt={movie.name} className={`row__poster ${isLargeRow ? "row__posterLarge" : ""}`} loading="lazy" onError={(e) => { e.target.src = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='225' fill='%23333'><rect width='150' height='225'/><text x='50%' y='50%' fill='%23666' text-anchor='middle' dy='.3em' font-size='14'>No Image</text></svg>" }} 
                     />
+                    <div className="poster-title">{movie?.title || movie?.name || movie?.original_name}</div>
+                </div>
             ))}
         </div>
         <div style={{padding:'40px'}}>
