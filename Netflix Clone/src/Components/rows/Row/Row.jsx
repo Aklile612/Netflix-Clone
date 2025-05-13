@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./Row.css"
 import axios from "../../../utils/axios";
 import movieTrailer from 'movie-trailer';
@@ -8,18 +8,20 @@ const Row = ({title,fetchUrl,isLargeRow}) => {
 
     const [movies,setMovies]=useState([]);
     const [trailerUrl,settrailerUrl] =useState(null);
+    const [loading,setLoading]=useState(false);
 
     const base_url="https://image.tmdb.org/t/p/original";
 
     useEffect(()=>{
         (async()=>{
             try{
-                // console.log(fetchUrl)
+                setLoading(true);
                 const request=await axios.get(fetchUrl);
-                // console.log(request);
                 setMovies(request.data.results);
+                setLoading(false);
             }catch(error){
                 console.log("error",error);
+                setLoading(false);
             }
         }) ()
     },[fetchUrl]);
@@ -49,11 +51,11 @@ const Row = ({title,fetchUrl,isLargeRow}) => {
     <div className='row'>
         <h1>{title}</h1>
         <div className='row_posters'>
-            {movies.map((movie,index)=>(
-                <div className="poster-container">
+            {loading ? <p style={{color:"gray"}}>Loading...</p> : movies.map((movie)=>(
+                <div className="poster-container" key={movie.id}>
                     <img
                         onClick={()=> handleclick(movie)}
-                        key={movie.id} src={`${base_url}${isLargeRow? movie.poster_path :movie.backdrop_path}`} alt={movie.name} className={`row__poster ${isLargeRow ? "row__posterLarge" : ""}`} loading="lazy" onError={(e) => { e.target.src = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='225' fill='%23333'><rect width='150' height='225'/><text x='50%' y='50%' fill='%23666' text-anchor='middle' dy='.3em' font-size='14'>No Image</text></svg>" }} 
+                        src={`${base_url}${isLargeRow? movie.poster_path :movie.backdrop_path}`} alt={movie.name} className={`row__poster ${isLargeRow ? "row__posterLarge" : ""}`} loading="lazy" onError={(e) => { e.target.src = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='225' fill='%23333'><rect width='150' height='225'/><text x='50%' y='50%' fill='%23666' text-anchor='middle' dy='.3em' font-size='14'>No Image</text></svg>" }} 
                     />
                     <div className="poster-title">{movie?.title || movie?.name || movie?.original_name}</div>
                 </div>
