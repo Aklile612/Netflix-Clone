@@ -5,16 +5,18 @@ import "./Banner.css";
 
 const Banner =()=> {
   const [movie,setMovie]=useState(null);
+  const [bannerLoading,setBannerLoading]=useState(true);
   useEffect(()=>{
     (async()=>{
         try{
             const request = await axios.get(requests.fetchNetflixOriginals);
-            // console.log(request);
             setMovie(request.data.results[
                 Math.floor(Math.random() * request.data.results.length)
             ]);
+            setBannerLoading(false);
         } catch(error){
             console.log("error",error);
+            setBannerLoading(false);
         }
     }) ()
   },[]);
@@ -31,6 +33,7 @@ const Banner =()=> {
             backgroundRepeat:"no-repeat"
         }}
         >
+            {bannerLoading && <div className="banner-loading">Loading...</div>}
             <div className='banner_contents'>
                 <h1 className='banner_title'>
                     {movie?.title || movie?.name || movie?.original_name}
