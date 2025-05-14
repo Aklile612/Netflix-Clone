@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import NetfixLogo from "../../assets/images/netflix_PNG11.png"
 
 import SearchIcon from '@mui/icons-material/Search';
@@ -7,8 +7,14 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import "./header.css"
 function Header() {
+  const [scrolled,setScrolled]=useState(false);
+  useEffect(()=>{
+    const handleScroll=()=>setScrolled(window.scrollY>50);
+    window.addEventListener("scroll",handleScroll);
+    return ()=>window.removeEventListener("scroll",handleScroll);
+  },[]);
   return (
-    <div className='header_outer_container'> 
+    <div className={`header_outer_container ${scrolled?"nav_black":""}`}> 
       <div className='header_container'>
         <div className='header_left'>
           <ul>
