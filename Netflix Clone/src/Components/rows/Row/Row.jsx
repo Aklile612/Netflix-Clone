@@ -51,7 +51,7 @@ const Row = ({title,fetchUrl,isLargeRow}) => {
     <div className='row'>
         <h1>{title}</h1>
         <div className='row_posters'>
-            {loading ? <p style={{color:"gray"}}>Loading...</p> : movies.map((movie)=>(
+            {loading ? <p style={{color:"gray"}}>Loading...</p> : movies.length === 0 ? <p style={{color:"gray"}}>No movies available</p> : movies.map((movie)=>(
                 <div className="poster-container" key={movie.id}>
                     <img
                         onClick={()=> handleclick(movie)}
