@@ -5,6 +5,16 @@
 }
 body{
     background-color: #111;
+}
+
+@media (max-width: 768px) {
+  .banner_title { font-size: 2rem; }
+  .banner_description { max-width: 260px; }
+  .banner_button { padding: 0.8rem 1.5rem; font-size: 1rem; }
+  .header_left ul { width: 100%; gap: 8px; font-size: 12px; }
+  .header-right ul { width: auto; gap: 5px; }
+  .footer_inner_container { width: 90%; }
+  .footer_data { flex-wrap: wrap; gap: 10px; }
 }/* style tweak 1 */
 /* style tweak 2 */
 /* style tweak 3 */
