@@ -57,7 +57,7 @@ const Row = ({title,fetchUrl,isLargeRow}) => {
                         onClick={()=> handleclick(movie)}
                         src={`${base_url}${isLargeRow? movie.poster_path :movie.backdrop_path}`} alt={movie.name} className={`row__poster ${isLargeRow ? "row__posterLarge" : ""}`} loading="lazy" onError={(e) => { e.target.src = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='150' height='225' fill='%23333'><rect width='150' height='225'/><text x='50%' y='50%' fill='%23666' text-anchor='middle' dy='.3em' font-size='14'>No Image</text></svg>" }} 
                     />
-                    <div className="poster-title">{movie?.title || movie?.name || movie?.original_name}</div>
+                    <div className="poster-title">{movie?.title || movie?.name || movie?.original_name} {movie?.release_date ? `(${movie.release_date.slice(0,4)})` : movie?.first_air_date ? `(${movie.first_air_date.slice(0,4)})` : ""}</div>
                 </div>
             ))}
         </div>

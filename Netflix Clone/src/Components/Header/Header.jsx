@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import NetfixLogo from "../../assets/images/netflix_PNG11.png"
+import NetflixLogo from "../../assets/images/netflix_PNG11.png"
 
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
@@ -18,7 +18,7 @@ function Header() {
       <div className='header_container'>
         <div className='header_left'>
           <ul>
-            <li> <img src={NetfixLogo} alt="Netflix-logo" width="100" /></li>
+            <li> <img src={NetflixLogo} alt="Netflix-logo" width="100" /></li>
             <li>Netflix</li>
             <li>Home</li>
             <li>TVShows</li>
