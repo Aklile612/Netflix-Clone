@@ -39,3 +39,7 @@
     cursor: pointer;
     /* background-color: lightgreen; */
 }
+.header_left ul li:hover,
+.header-right ul li:hover {
+    color: #b3b3b3;
+}
