@@ -17,6 +17,7 @@
 .poster-container {
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 
 .poster-title {
