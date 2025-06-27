@@ -4,6 +4,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import "./footer.css"
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <div className='footer_outer_container'>
       <div className='footer_inner_container'>
@@ -47,7 +48,7 @@ function Footer() {
             </p>
           </div>
           <div className='copy-write'>
-            &copy; 1997-2025 Netflix,Inc.
+            &copy; 1997-{currentYear} Netflix,Inc.
           </div>       
         </div>
       </div>
