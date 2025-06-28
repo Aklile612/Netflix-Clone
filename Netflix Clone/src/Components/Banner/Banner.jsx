@@ -15,7 +15,6 @@ const Banner =()=> {
             ]);
             setBannerLoading(false);
         } catch(error){
-            console.log("error",error);
             setBannerLoading(false);
         }
     }) ()
