@@ -23,3 +23,7 @@ test("releaseYear reads release_date fixture 2", () => {
   assert.equal(releaseYear({"release_date":"2025-12-08","first_air_date":"2019-01-01"}), "2025");
 });
 
+test("buildImageUrl joins TMDB base with poster fixture 3", () => {
+  assert.equal(buildImageUrl("/stranger_things_0.jpg"), "https://image.tmdb.org/t/p/original/stranger_things_0.jpg");
+});
+
