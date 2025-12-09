@@ -19,3 +19,7 @@ test("displayTitle prefers title for fixture 1", () => {
   assert.equal(displayTitle({"title":"Stranger Things","name":"Alternative 1","original_name":"Original 1"}), "Stranger Things");
 });
 
+test("releaseYear reads release_date fixture 2", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-08","first_air_date":"2019-01-01"}), "2025");
+});
+
