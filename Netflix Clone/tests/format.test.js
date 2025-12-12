@@ -27,3 +27,7 @@ test("buildImageUrl joins TMDB base with poster fixture 3", () => {
   assert.equal(buildImageUrl("/stranger_things_0.jpg"), "https://image.tmdb.org/t/p/original/stranger_things_0.jpg");
 });
 
+test("isScrolled evaluates offset 0 (fixture 4)", () => {
+  assert.equal(isScrolled(0), false);
+});
+
