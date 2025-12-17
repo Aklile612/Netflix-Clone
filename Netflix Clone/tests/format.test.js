@@ -47,3 +47,7 @@ test("truncateOverview shortens overview fixture 8", () => {
   assert.equal(truncateOverview("The Crown — fixture 8: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "The Crown — fixture 8: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode ...");
 });
 
+test("displayTitle prefers title for fixture 9", () => {
+  assert.equal(displayTitle({"title":"The Crown","name":"Alternative 9","original_name":"Original 9"}), "The Crown");
+});
+
