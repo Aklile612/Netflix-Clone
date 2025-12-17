@@ -43,3 +43,7 @@ test("formatRuntime formats 40 minutes (fixture 7)", () => {
   assert.equal(formatRuntime(40), "40m");
 });
 
+test("truncateOverview shortens overview fixture 8", () => {
+  assert.equal(truncateOverview("The Crown — fixture 8: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "The Crown — fixture 8: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode ...");
+});
+
