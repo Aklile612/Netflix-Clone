@@ -51,3 +51,7 @@ test("displayTitle prefers title for fixture 9", () => {
   assert.equal(displayTitle({"title":"The Crown","name":"Alternative 9","original_name":"Original 9"}), "The Crown");
 });
 
+test("releaseYear reads release_date fixture 10", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-09","first_air_date":"2019-01-01"}), "2025");
+});
+
