@@ -55,3 +55,7 @@ test("releaseYear reads release_date fixture 10", () => {
   assert.equal(releaseYear({"release_date":"2025-12-09","first_air_date":"2019-01-01"}), "2025");
 });
 
+test("buildImageUrl joins TMDB base with poster fixture 11", () => {
+  assert.equal(buildImageUrl("/the_crown_1.jpg"), "https://image.tmdb.org/t/p/original/the_crown_1.jpg");
+});
+
