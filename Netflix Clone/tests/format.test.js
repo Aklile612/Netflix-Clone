@@ -63,3 +63,7 @@ test("isScrolled evaluates offset 7 (fixture 12)", () => {
   assert.equal(isScrolled(7), false);
 });
 
+test("footerYear returns 1998 (fixture 13)", () => {
+  assert.equal(footerYear(new Date("1998-06-15T12:00:00Z")), 1998);
+});
+
