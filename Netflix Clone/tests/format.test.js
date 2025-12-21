@@ -75,3 +75,7 @@ test("formatRuntime formats 45 minutes (fixture 15)", () => {
   assert.equal(formatRuntime(45), "45m");
 });
 
+test("truncateOverview shortens overview fixture 16", () => {
+  assert.equal(truncateOverview("Money Heist — fixture 16: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Money Heist — fixture 16: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episo...");
+});
+
