@@ -79,3 +79,7 @@ test("truncateOverview shortens overview fixture 16", () => {
   assert.equal(truncateOverview("Money Heist — fixture 16: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Money Heist — fixture 16: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episo...");
 });
 
+test("displayTitle prefers title for fixture 17", () => {
+  assert.equal(displayTitle({"title":"Money Heist","name":"Alternative 17","original_name":"Original 17"}), "Money Heist");
+});
+
