@@ -83,3 +83,7 @@ test("displayTitle prefers title for fixture 17", () => {
   assert.equal(displayTitle({"title":"Money Heist","name":"Alternative 17","original_name":"Original 17"}), "Money Heist");
 });
 
+test("releaseYear reads release_date fixture 18", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-10","first_air_date":"2019-01-01"}), "2025");
+});
+
