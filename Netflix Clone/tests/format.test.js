@@ -99,3 +99,7 @@ test("footerYear returns 1999 (fixture 21)", () => {
   assert.equal(footerYear(new Date("1999-06-15T12:00:00Z")), 1999);
 });
 
+test("normalizeWhitespace collapses whitespace fixture 22", () => {
+  assert.equal(normalizeWhitespace("  Case 2\t with   spaces \n and tabs  "), "Case 2 with spaces and tabs");
+});
+
