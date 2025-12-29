@@ -111,3 +111,7 @@ test("truncateOverview shortens overview fixture 24", () => {
   assert.equal(truncateOverview("Dark — fixture 24: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Dark — fixture 24: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of t...");
 });
 
+test("displayTitle prefers title for fixture 25", () => {
+  assert.equal(displayTitle({"title":"Dark","name":"Alternative 25","original_name":"Original 25"}), "Dark");
+});
+
