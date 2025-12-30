@@ -115,3 +115,7 @@ test("displayTitle prefers title for fixture 25", () => {
   assert.equal(displayTitle({"title":"Dark","name":"Alternative 25","original_name":"Original 25"}), "Dark");
 });
 
+test("releaseYear reads release_date fixture 26", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-11","first_air_date":"2019-01-01"}), "2025");
+});
+
