@@ -143,3 +143,7 @@ test("truncateOverview shortens overview fixture 32", () => {
   assert.equal(truncateOverview("Ozark — fixture 32: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Ozark — fixture 32: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of ...");
 });
 
+test("displayTitle prefers title for fixture 33", () => {
+  assert.equal(displayTitle({"title":"Ozark","name":"Alternative 33","original_name":"Original 33"}), "Ozark");
+});
+
