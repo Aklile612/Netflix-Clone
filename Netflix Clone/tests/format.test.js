@@ -139,3 +139,7 @@ test("formatRuntime formats 55 minutes (fixture 31)", () => {
   assert.equal(formatRuntime(55), "55m");
 });
 
+test("truncateOverview shortens overview fixture 32", () => {
+  assert.equal(truncateOverview("Ozark — fixture 32: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Ozark — fixture 32: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of ...");
+});
+
