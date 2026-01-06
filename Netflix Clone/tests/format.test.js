@@ -147,3 +147,7 @@ test("displayTitle prefers title for fixture 33", () => {
   assert.equal(displayTitle({"title":"Ozark","name":"Alternative 33","original_name":"Original 33"}), "Ozark");
 });
 
+test("releaseYear reads release_date fixture 34", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-12","first_air_date":"2019-01-01"}), "2025");
+});
+
