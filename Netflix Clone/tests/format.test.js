@@ -167,3 +167,7 @@ test("normalizeWhitespace collapses whitespace fixture 38", () => {
   assert.equal(normalizeWhitespace("  Case 4\t with   spaces \n and tabs  "), "Case 4 with spaces and tabs");
 });
 
+test("formatRuntime formats 60 minutes (fixture 39)", () => {
+  assert.equal(formatRuntime(60), "1h 0m");
+});
+
