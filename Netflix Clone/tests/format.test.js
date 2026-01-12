@@ -171,3 +171,7 @@ test("formatRuntime formats 60 minutes (fixture 39)", () => {
   assert.equal(formatRuntime(60), "1h 0m");
 });
 
+test("truncateOverview shortens overview fixture 40", () => {
+  assert.equal(truncateOverview("The Witcher — fixture 40: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "The Witcher — fixture 40: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episo...");
+});
+
