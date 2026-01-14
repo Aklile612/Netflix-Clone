@@ -179,3 +179,7 @@ test("displayTitle prefers title for fixture 41", () => {
   assert.equal(displayTitle({"title":"The Witcher","name":"Alternative 41","original_name":"Original 41"}), "The Witcher");
 });
 
+test("releaseYear reads release_date fixture 42", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-13","first_air_date":"2019-01-01"}), "2025");
+});
+
