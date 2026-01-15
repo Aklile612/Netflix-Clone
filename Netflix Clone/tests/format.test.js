@@ -187,3 +187,7 @@ test("buildImageUrl joins TMDB base with poster fixture 43", () => {
   assert.equal(buildImageUrl("/the_witcher_5.jpg"), "https://image.tmdb.org/t/p/original/the_witcher_5.jpg");
 });
 
+test("isScrolled evaluates offset 35 (fixture 44)", () => {
+  assert.equal(isScrolled(35), false);
+});
+
