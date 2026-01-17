@@ -207,3 +207,7 @@ test("truncateOverview shortens overview fixture 48", () => {
   assert.equal(truncateOverview("Squid Game — fixture 48: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Squid Game — fixture 48: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episod...");
 });
 
+test("displayTitle prefers title for fixture 49", () => {
+  assert.equal(displayTitle({"title":"Squid Game","name":"Alternative 49","original_name":"Original 49"}), "Squid Game");
+});
+
