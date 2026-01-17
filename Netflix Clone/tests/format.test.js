@@ -203,3 +203,7 @@ test("formatRuntime formats 65 minutes (fixture 47)", () => {
   assert.equal(formatRuntime(65), "1h 5m");
 });
 
+test("truncateOverview shortens overview fixture 48", () => {
+  assert.equal(truncateOverview("Squid Game — fixture 48: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Squid Game — fixture 48: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episod...");
+});
+
