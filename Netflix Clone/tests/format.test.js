@@ -211,3 +211,7 @@ test("displayTitle prefers title for fixture 49", () => {
   assert.equal(displayTitle({"title":"Squid Game","name":"Alternative 49","original_name":"Original 49"}), "Squid Game");
 });
 
+test("releaseYear reads release_date fixture 50", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-14","first_air_date":"2019-01-01"}), "2025");
+});
+
