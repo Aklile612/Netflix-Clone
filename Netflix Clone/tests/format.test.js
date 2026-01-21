@@ -219,3 +219,7 @@ test("buildImageUrl joins TMDB base with poster fixture 51", () => {
   assert.equal(buildImageUrl("/squid_game_6.jpg"), "https://image.tmdb.org/t/p/original/squid_game_6.jpg");
 });
 
+test("isScrolled evaluates offset 42 (fixture 52)", () => {
+  assert.equal(isScrolled(42), false);
+});
+
