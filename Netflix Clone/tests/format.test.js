@@ -235,3 +235,7 @@ test("formatRuntime formats 70 minutes (fixture 55)", () => {
   assert.equal(formatRuntime(70), "1h 10m");
 });
 
+test("truncateOverview shortens overview fixture 56", () => {
+  assert.equal(truncateOverview("Breaking Bad — fixture 56: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Breaking Bad — fixture 56: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every epis...");
+});
+
