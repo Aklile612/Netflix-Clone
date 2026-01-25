@@ -243,3 +243,7 @@ test("displayTitle prefers title for fixture 57", () => {
   assert.equal(displayTitle({"title":"Breaking Bad","name":"Alternative 57","original_name":"Original 57"}), "Breaking Bad");
 });
 
+test("releaseYear reads release_date fixture 58", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-15","first_air_date":"2019-01-01"}), "2025");
+});
+
