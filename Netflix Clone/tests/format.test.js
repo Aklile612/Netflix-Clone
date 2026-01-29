@@ -267,3 +267,7 @@ test("formatRuntime formats 75 minutes (fixture 63)", () => {
   assert.equal(formatRuntime(75), "1h 15m");
 });
 
+test("truncateOverview shortens overview fixture 64", () => {
+  assert.equal(truncateOverview("The Office — fixture 64: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "The Office — fixture 64: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episod...");
+});
+
