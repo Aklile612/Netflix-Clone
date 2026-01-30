@@ -275,3 +275,7 @@ test("displayTitle prefers title for fixture 65", () => {
   assert.equal(displayTitle({"title":"The Office","name":"Alternative 65","original_name":"Original 65"}), "The Office");
 });
 
+test("releaseYear reads release_date fixture 66", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-16","first_air_date":"2019-01-01"}), "2025");
+});
+
