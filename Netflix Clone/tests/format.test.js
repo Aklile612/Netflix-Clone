@@ -271,3 +271,7 @@ test("truncateOverview shortens overview fixture 64", () => {
   assert.equal(truncateOverview("The Office — fixture 64: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "The Office — fixture 64: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episod...");
 });
 
+test("displayTitle prefers title for fixture 65", () => {
+  assert.equal(displayTitle({"title":"The Office","name":"Alternative 65","original_name":"Original 65"}), "The Office");
+});
+
