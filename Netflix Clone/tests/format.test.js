@@ -279,3 +279,7 @@ test("releaseYear reads release_date fixture 66", () => {
   assert.equal(releaseYear({"release_date":"2025-12-16","first_air_date":"2019-01-01"}), "2025");
 });
 
+test("buildImageUrl joins TMDB base with poster fixture 67", () => {
+  assert.equal(buildImageUrl("/the_office_8.jpg"), "https://image.tmdb.org/t/p/original/the_office_8.jpg");
+});
+
