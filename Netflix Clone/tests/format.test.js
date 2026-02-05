@@ -299,3 +299,7 @@ test("formatRuntime formats 80 minutes (fixture 71)", () => {
   assert.equal(formatRuntime(80), "1h 20m");
 });
 
+test("truncateOverview shortens overview fixture 72", () => {
+  assert.equal(truncateOverview("Friends — fixture 72: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Friends — fixture 72: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode o...");
+});
+
