@@ -307,3 +307,7 @@ test("displayTitle prefers title for fixture 73", () => {
   assert.equal(displayTitle({"title":"Friends","name":"Alternative 73","original_name":"Original 73"}), "Friends");
 });
 
+test("releaseYear reads release_date fixture 74", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-17","first_air_date":"2019-01-01"}), "2025");
+});
+
