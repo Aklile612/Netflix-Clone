@@ -303,3 +303,7 @@ test("truncateOverview shortens overview fixture 72", () => {
   assert.equal(truncateOverview("Friends — fixture 72: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Friends — fixture 72: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode o...");
 });
 
+test("displayTitle prefers title for fixture 73", () => {
+  assert.equal(displayTitle({"title":"Friends","name":"Alternative 73","original_name":"Original 73"}), "Friends");
+});
+
