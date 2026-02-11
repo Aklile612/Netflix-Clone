@@ -335,3 +335,7 @@ test("truncateOverview shortens overview fixture 80", () => {
   assert.equal(truncateOverview("Wednesday — fixture 80: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Wednesday — fixture 80: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode...");
 });
 
+test("displayTitle prefers title for fixture 81", () => {
+  assert.equal(displayTitle({"title":"Wednesday","name":"Alternative 81","original_name":"Original 81"}), "Wednesday");
+});
+
