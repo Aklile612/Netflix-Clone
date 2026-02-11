@@ -331,3 +331,7 @@ test("formatRuntime formats 85 minutes (fixture 79)", () => {
   assert.equal(formatRuntime(85), "1h 25m");
 });
 
+test("truncateOverview shortens overview fixture 80", () => {
+  assert.equal(truncateOverview("Wednesday — fixture 80: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Wednesday — fixture 80: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode...");
+});
+
