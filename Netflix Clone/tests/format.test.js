@@ -347,3 +347,7 @@ test("buildImageUrl joins TMDB base with poster fixture 83", () => {
   assert.equal(buildImageUrl("/wednesday_10.jpg"), "https://image.tmdb.org/t/p/original/wednesday_10.jpg");
 });
 
+test("isScrolled evaluates offset 70 (fixture 84)", () => {
+  assert.equal(isScrolled(70), true);
+});
+
