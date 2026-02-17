@@ -367,3 +367,7 @@ test("truncateOverview shortens overview fixture 88", () => {
   assert.equal(truncateOverview("One Piece — fixture 88: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "One Piece — fixture 88: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode...");
 });
 
+test("displayTitle prefers title for fixture 89", () => {
+  assert.equal(displayTitle({"title":"One Piece","name":"Alternative 89","original_name":"Original 89"}), "One Piece");
+});
+
