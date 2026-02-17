@@ -363,3 +363,7 @@ test("formatRuntime formats 90 minutes (fixture 87)", () => {
   assert.equal(formatRuntime(90), "1h 30m");
 });
 
+test("truncateOverview shortens overview fixture 88", () => {
+  assert.equal(truncateOverview("One Piece — fixture 88: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "One Piece — fixture 88: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode...");
+});
+
