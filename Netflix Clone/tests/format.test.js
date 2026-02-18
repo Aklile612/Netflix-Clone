@@ -371,3 +371,7 @@ test("displayTitle prefers title for fixture 89", () => {
   assert.equal(displayTitle({"title":"One Piece","name":"Alternative 89","original_name":"Original 89"}), "One Piece");
 });
 
+test("releaseYear reads release_date fixture 90", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-19","first_air_date":"2019-01-01"}), "2025");
+});
+
