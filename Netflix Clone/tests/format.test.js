@@ -399,3 +399,7 @@ test("truncateOverview shortens overview fixture 96", () => {
   assert.equal(truncateOverview("Naruto — fixture 96: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of this acclaimed series.", 150), "Naruto — fixture 96: a gripping story of suspense, drama, and unexpected twists that keeps viewers on the edge of their seats across every episode of...");
 });
 
+test("displayTitle prefers title for fixture 97", () => {
+  assert.equal(displayTitle({"title":"Naruto","name":"Alternative 97","original_name":"Original 97"}), "Naruto");
+});
+
