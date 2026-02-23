@@ -403,3 +403,7 @@ test("displayTitle prefers title for fixture 97", () => {
   assert.equal(displayTitle({"title":"Naruto","name":"Alternative 97","original_name":"Original 97"}), "Naruto");
 });
 
+test("releaseYear reads release_date fixture 98", () => {
+  assert.equal(releaseYear({"release_date":"2025-12-20","first_air_date":"2019-01-01"}), "2025");
+});
+
